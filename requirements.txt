@@ -6,3 +6,4 @@ plotly==5.9.0
 wordcloud==1.9.2
 gunicorn
 dash-tools
+dropbox

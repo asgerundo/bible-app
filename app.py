@@ -15,7 +15,7 @@ import nltk
 from nltk.corpus import stopwords
 import string
 
-app = dash(__name__, title="bible_app")
+app = Dash(__name__)
 server=app.server
 
 df = pd.read_csv('/Users/asgermollernielsen/Downloads/bible_data.csv', encoding='utf-8')

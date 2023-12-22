@@ -18,7 +18,7 @@ import string
 app = dash.Dash(__name__)
 server=app.server
 
-df = pd.read_csv('/Users/asgermollernielsen/Downloads/bible_data.csv', encoding='utf-8')
+df = pd.read_csv('https://drive.google.com/file/d/1y77rCOZqIrkQyfvVCFFINEtRnIPYuvNg/view?usp=sharing', encoding='utf-8')
 df.rename(columns={"Language": "language", 'Bible edition':'bible_edition', 'Book name':'book_name', 'Chapter':'chapter','Verse':'verse'}, inplace=True)
 df.columns
 data=df

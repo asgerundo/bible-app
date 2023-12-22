@@ -14,18 +14,29 @@ import base64
 import nltk
 from nltk.corpus import stopwords
 import string
+import dropbox
+from io import StringIO
 
 app = dash.Dash(__name__)
 server=app.server
 
-df = pd.read_csv('https://drive.google.com/file/d/1y77rCOZqIrkQyfvVCFFINEtRnIPYuvNg/view?usp=sharing', encoding='utf-8')
-df.rename(columns={"Language": "language", 'Bible edition':'bible_edition', 'Book name':'book_name', 'Chapter':'chapter','Verse':'verse'}, inplace=True)
-df.columns
-data=df
-#stopwords = open('stopwords.txt',encoding='utf-8').read().split("\n")  #Alternative list of english stopwords, but 'from nltk.corpus import stopwords' is used as it covers many languages.
 
-# app.layout = html.Div(style={'backgroundColor': 'red'},  # Set the background color
-#         children=[     #Start of html/app/dashboard layout section.
+# Dropbox access token (generate one from the Dropbox App Console)
+DROPBOX_ACCESS_TOKEN = "sl.BsOuOVCOWDztbV9__TDRVdT6rocGHi6z9VYGI4GYLaB9gMWgdcA_dm4SrdDUo5cFJLuoD9sZUsaLkpW9CwHBp_-loMRYaq9lNk5mq5V25MZ2Sg5ati1rCIcgz8_hiTCU9aiSbfQDrTAc7cGRTP0gSDc"
+
+# Dropbox file path
+DROPBOX_FILE_PATH = "/bible.csv"
+
+# Initialize Dropbox client
+dbx = dropbox.Dropbox(DROPBOX_ACCESS_TOKEN)
+
+
+# Download the file
+metadata, response = dbx.files_download(DROPBOX_FILE_PATH)
+
+    # Decode the content as a string and create a Pandas DataFrame
+content_str = response.content.decode('utf-8')
+data = pd.read_csv(StringIO(content_str))
 
 app.layout = html.Div([     #Start of html/app/dashboard layout section.
         html.H1("Bible Editions (Group 9)", style={"textAlign":"center"}),  #Dashboard main header.

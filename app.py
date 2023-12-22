@@ -16,6 +16,7 @@ from nltk.corpus import stopwords
 import string
 
 app = Dash(__name__, title="bible_app")
+server=app.server
 
 df = pd.read_csv('/Users/asgermollernielsen/Downloads/bible_data.csv', encoding='utf-8')
 df.rename(columns={"Language": "language", 'Bible edition':'bible_edition', 'Book name':'book_name', 'Chapter':'chapter','Verse':'verse'}, inplace=True)

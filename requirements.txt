@@ -7,3 +7,4 @@ wordcloud==1.9.2
 gunicorn
 dash-tools
 dropbox
+io

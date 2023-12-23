@@ -21,9 +21,6 @@ app = dash.Dash(__name__)
 server=app.server
 
 
-# Dropbox access token (generate one from the Dropbox App Console)
-DROPBOX_ACCESS_TOKEN = "sl.BsRI8l4CYT8NN4_VDg2ykmNbJ8lLMQGCtJHsbtle5e0QKN3EmYFbDNHva6rJB-JbDdCxnxWX5njPh_RlbcU0C9CQdNw3Gb3Sx1gzGOt3UuFgQZ30npuAfyoZUGAVl-3gSQOloWBLXua3VAlB6zNV5Z8"
-
 # Dropbox file path
 DROPBOX_FILE_PATH = "/bible.csv"
 

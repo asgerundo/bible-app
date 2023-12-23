@@ -16,11 +16,13 @@ from nltk.corpus import stopwords
 import string
 import dropbox
 from io import StringIO
+import os
 
 app = dash.Dash(__name__)
 server=app.server
 
 
+DROPBOX_ACCESS_TOKEN= os.environ.get('DROPBOX_ACCESS_TOKEN')
 # Dropbox file path
 DROPBOX_FILE_PATH = "/bible.csv"
 

@@ -22,7 +22,7 @@ server=app.server
 
 
 # Dropbox access token (generate one from the Dropbox App Console)
-DROPBOX_ACCESS_TOKEN = "sl.BsOuOVCOWDztbV9__TDRVdT6rocGHi6z9VYGI4GYLaB9gMWgdcA_dm4SrdDUo5cFJLuoD9sZUsaLkpW9CwHBp_-loMRYaq9lNk5mq5V25MZ2Sg5ati1rCIcgz8_hiTCU9aiSbfQDrTAc7cGRTP0gSDc"
+DROPBOX_ACCESS_TOKEN = "sl.BsRI8l4CYT8NN4_VDg2ykmNbJ8lLMQGCtJHsbtle5e0QKN3EmYFbDNHva6rJB-JbDdCxnxWX5njPh_RlbcU0C9CQdNw3Gb3Sx1gzGOt3UuFgQZ30npuAfyoZUGAVl-3gSQOloWBLXua3VAlB6zNV5Z8"
 
 # Dropbox file path
 DROPBOX_FILE_PATH = "/bible.csv"

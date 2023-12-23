@@ -24,7 +24,7 @@ server=app.server
 
 DROPBOX_ACCESS_TOKEN= os.environ.get('DROPBOX_ACCESS_TOKEN')
 # Dropbox file path
-DROPBOX_FILE_PATH = "/bible.csv"
+DROPBOX_FILE_PATH = "/bible_data_small.csv"
 
 # Initialize Dropbox client
 dbx = dropbox.Dropbox(DROPBOX_ACCESS_TOKEN)
